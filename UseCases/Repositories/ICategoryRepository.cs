@@ -10,6 +10,9 @@ namespace UseCases.Repositories
          IEnumerable<Category> GetCategories();
         void AddCategory(Category category);
         void EditCategory(Category category);
+        Category GetCategoriesById(int CategoryId);
+
+        void DeleteCategory(Category category);
 
     }
 }

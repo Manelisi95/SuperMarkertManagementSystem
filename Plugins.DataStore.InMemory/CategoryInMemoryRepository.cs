@@ -30,10 +30,36 @@ namespace Plugins.DataStore.InMemory
 
             categories.Add(category);
         }
+        public void EditCategory(Category category)
+        {
+
+            var editCategory = GetCategoriesById(category.CategoryId);
+            if (editCategory != null)
+            {
+                editCategory = category;
+            }
+        }
 
         public IEnumerable<Category> GetCategories()
         {
             return categories;
         }
+
+        public Category GetCategoriesById(int CategoryId)
+        {
+            return categories?.FirstOrDefault(x => x.CategoryId == CategoryId);
+        }
+
+        public void DeleteCategory(Category category)
+        {
+
+            var deleteCategory = GetCategoriesById(category.CategoryId);
+            if (deleteCategory != null)
+            {
+                categories.Remove(category);
+            }
+        }
+
+
     }
 }

@@ -36,8 +36,9 @@ namespace WebApp
             services.AddScoped<IViewCategoriesUseCase, ViewCategoriesUseCase>();
             services.AddScoped<IAddCategoryUseCase, AddCategoryUseCase>();
             services.AddScoped<IEditCategoryUseCase, EditCategoryUseCase>();
-            
-            
+            services.AddScoped<IGetCategoryByIdUseCase, GetCategoryByIdUseCase>();
+
+
         }
          
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
