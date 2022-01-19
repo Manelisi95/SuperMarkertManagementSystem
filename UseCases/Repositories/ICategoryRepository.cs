@@ -12,7 +12,7 @@ namespace UseCases.Repositories
         void EditCategory(Category category);
         Category GetCategoriesById(int CategoryId);
 
-        void DeleteCategory(Category category);
-
+        void DeleteCategory(int categoryId);
+     
     }
 }

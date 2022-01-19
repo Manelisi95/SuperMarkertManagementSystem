@@ -1,9 +1,7 @@
-﻿using CoreBusiness;
-
-namespace UseCases
+﻿namespace UseCases
 {
     public interface IDeleteCategoryUseCase
     {
-        void Execute(Category category);
+        void Execute(int CategoryId);
     }
 }

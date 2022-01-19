@@ -6,7 +6,7 @@ using UseCases.Repositories;
 
 namespace UseCases
 {
-    class DeleteCategoryUseCase : IDeleteCategoryUseCase
+   public class DeleteCategoryUseCase : IDeleteCategoryUseCase
     {
         private readonly ICategoryRepository categoryRepository;
 
@@ -15,9 +15,9 @@ namespace UseCases
             this.categoryRepository = categoryRepository;
         }
 
-        public void Execute(Category category)
+        public void Execute(int CategoryId)
         {
-            categoryRepository.DeleteCategory(category);
+            categoryRepository.DeleteCategory(CategoryId);
         }
     }
 }
